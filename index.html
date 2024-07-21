@@ -20,7 +20,7 @@
                     <li><a href="#">About Us </a></li>
                     <li><a href="#best-attractions-in-kerala">Best Attractions to Visit </a></li>
                     <li><a href="#Districts">Districts </a></li>
-                    <li><a href="#RegistrationForms">Know More on Tourism Packages </a></li>
+                    <li><a href="#RegistrationForm">Know More on Tourism Packages </a></li>
                     <button>Login</button>
                     <br>
                     <button>SignUp</button>
@@ -202,38 +202,72 @@
         <h3>
             <u> <mark>Know More about Tourism Packages:</u>
         </h3>
-        <form action="#" id="RegistrationForm">
-            <fieldset>
+        <fieldset>
+            <form action="#" id="RegistrationForm">
                 <!-- Name,Email,Phone,Districts dropdown ,submit button , 
       also ensure validations in those fields-->
-                <h3> <u> Register below to know more about Tourism packages:</u> </h3>
+                <h3> <u> Register below for Exciting Offers :</u> </h3>
 
-                <label for="name">FIRST NAME:*</label>
-                <input type="text" name="fname" id="fname" required pattern="[A-Za-z/s]"
-                    title="Text should contain only Capital, small letters and space">
-                <label for="name">LAST NAME:*</label>
-                <input type="text" name="lname" id="lname" required pattern="[A-Za-z/s]"
-                    title="Text should contain only Capital, small letters and space">
+                <label for="fname">FIRST NAME:*</label>
+                <input type="text" name="fname" id="fname" pattern="^[A-Za-z]+$"
+                    title="Text should contain only Capital or small letters" required></input>
+
+                <label for="lname">LAST NAME:*</label>
+                <input type="text" name="lname" id="lname" required pattern="^[A-Za-z]+$"
+                    title="Text should contain only Capital, small letters and space"></input>
+
                 <br>
+
                 <label for="date">DATE OF BIRTH:*</label>
-                <input type="date" name="date" id="date" required>
+                <input type="date" name="date" id="date" min="1920-01-01" max="2024-07-22" required></input>
+
+
                 <br>
                 <label for="gender">GENDER:*</label>
-                <label for=""> <input type="radio" name="gender" id="gender" value="Male">Male</input> </label>
-                <label for=""> <input type="radio" name="gender" id="gender" value="Female">Female</input> </label>
-                <label for=""> <input type="radio" name="gender" id="gender" value="Other">Other</input> </label>
+                <label for="gender"> </label><input type="radio" name="gender" id="gender" value="Male"
+                    required>Male</input>
+                <label for="gender"> </label> <input type="radio" name="gender" id="gender" value="Female"
+                    required>Female</input>
+
+                <label for="gender"> </label> <input type="radio" name="gender" id="gender" value="Other"
+                    required>Other</input>
+
 
                 <br>
-                <label for=""> Mobile Number:
-                    <input type="text" name="contact" id="contact" placeholder="Enter Mobile Number"
-                        pattern="[0-9]{10} {+}{-} " required></input>
+                <label for="districts"> Do you have a preference for a district to visit:</label>
+                <select name="districts" id="districts">
 
-                </label>
+                    <option value="Select District">Select District</option>
+                    <option value="ALAPPUZHA">ALAPPUZHA</option>
+                    <option value="ERNAKULAM">ERNAKULAM</option>
+                    <option value="IDUKKI">IDUKKI</option>
+                    <option value="KANNUR">KANNUR</option>
+                    <option value="KASARAGOD">KASARAGOD</option>
+                    <option value="KOLLAM">KOLLAM</option>
+                    <option value="KOTTAYAM">KOTTAYAM</option>
+                    <option value="KOZHIKODE">KOZHIKODE</option>
+                    <option value="MALAPPURAM">MALAPPURAM</option>
+                    <option value="PALAKKAD">PALAKKAD</option>
+                    <option value="PATHANAMTHITTA">PATHANAMTHITTA</option>
+                    <option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
+                    <option value="THRISSUR">THRISSUR</option>
+                    <option value="WAYANAD">WAYANAD</option>
 
-                <label for=""> Email:<input type="text" name="email" id="email" placeholder="Enter Email ID"
-                        required></input>
+                </select>
 
-                </label>
+                <br>
+                <label for="contact"> MOBILE NUMBER:*</label>
+                <input type="text" name="contact" id="contact" placeholder="Enter Mobile Number"
+                    pattern="[+91]+[-]+[0-9]{10}" required title="Text should contain only Numbers 0-9+-"></input>
+
+
+                <br>
+                <label for=""> EMAIL:*</label>
+                <input type="text" name="email" id="email" placeholder="Enter Email ID"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required
+                    title=" field that that must be in the following order: characters@characters.domain "> </input>
+
+
                 <br>
                 <center>
                     <button type="submit">SUBMIT</button>
@@ -268,10 +302,10 @@
             </label>
  -->
 
-            </fieldset>
 
-        </form>
 
+            </form>
+        </fieldset>
 
 
         <footer>
